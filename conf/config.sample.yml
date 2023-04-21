@@ -1,8 +1,8 @@
 dateformat: '%Y%m%d'
-datasource: 'database' # tushare,database,akshare
+datasource: 'tushare' # tushare,database,akshare
 datasources:
         tushare:
-                token: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' # 你的tushare token，需要单独购买
+                token: '' # 你的tushare token，需要单独购买
         mysql:
                 uid: 'root'
                 pwd: '123456'
@@ -62,12 +62,12 @@ brokers:
                 uid: 'xxxxxxx'
                 pwd: 'yyyyyyy'
                 client_type: 'ths5.19'
-                exe_path: 'c:\software\ths\xiadan.exe'
+                exe_path: 'c:ths\xiadan.exe'
         mock: # 同花顺模拟炒股
                 uid: 'xxxxxxx'
                 pwd: 'yyyyyyy'
                 client_type: 'universal_client'
-                exe_path: 'c:\software\ths.mock\xiadan.exe'
+                exe_path: 'c:\thsmncg\xiadan.exe'
 # 当前使用的券商
 broker:
         name: 'mock'
@@ -76,6 +76,11 @@ broker:
 
 scheduler:
         trade: # 买卖调度器
+            interval: 10 # 调度相隔时间（单位：分钟）
+            buy_retry: 5 # 买重试的次数，超过这个次数，买单就取消了
+            sell_retry_once: 5 # 卖的时候，要反复尝试卖，这个是一次调度的时候尝试的次数（和买的有区别的）
+
+        heartbeat: # 心跳调度器
             interval: 10 # 调度相隔时间（单位：分钟）
             buy_retry: 5 # 买重试的次数，超过这个次数，买单就取消了
             sell_retry_once: 5 # 卖的时候，要反复尝试卖，这个是一次调度的时候尝试的次数（和买的有区别的）

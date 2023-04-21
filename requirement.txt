@@ -1,26 +1,31 @@
 tqdm
 tushare
 async_generator
-matplotlib==3.2.2
+numpy
+matplotlib
 jqdatasdk
 statsmodels
 pandas
 pyyaml
 scikit-learn
-backtrader==1.9.76.123
-backtrader_plotting
+backtrader
+backtrader_plotting 
 pymysql
 sqlalchemy==1.4.0
 empyrical
-chinese_calendar==1.7.2
-apscheduler==3.5.0
+chinese_calendar
+apscheduler
+easytrader
 
 baostock
 akshare
 quantstats
 
+git+https://github.com/piginzoo/easytrader.git
 IPython
 ipdb==0.13.9
 
 python-Levenshtein
 pycryptodome
+
+flask

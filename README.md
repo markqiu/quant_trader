@@ -75,7 +75,8 @@ bin\server.bat
 
 这个用于记录一些比较tricky的开发日志
 
-
+- 20230421
+  - 调试了一下，在python=3.10下面把不能运行通过的库都更新了一下，目前可以运行了。比如matplotlib升到最高，不必再windows下再编译了，apscheduler、chinese_calendar这些库都升级了。
 - 20220702
   - 加入了easytrader的集成，可以用它来做交易了，并对其进行了bug修复和扩展（项目已经4年未更新了，不适配5.19的同花顺xiadan.exe）    
   - 加入了web端实现，实现了在服务器端的一个调度：
